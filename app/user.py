@@ -1,34 +1,29 @@
+from user_models import User
+
 users = {}
 
-def create_user(username, password):
+def create_user():
     """
     creates user
     """
-    username = input("Please enter username: ")
-    password = input("Please enter password: ")
-    if username == "" or password == "":
-        print("Fields can not be left empty.")
-        return False
-    if len(password ) < 5:
-        print("Password too short, password shoul atleast be 6 characters.")
-        return False
-    if username in users.keys():
-        print("Oopps! Username already taken.")
-        print("Try a different username.")
-        return False
-    users[username] = password
-    print("User successfully created. Please login to continue")
-    return True
+    print("\nPlease register here.")
+    username = raw_input("Username:")
+    password = raw_input("Password:")
+    firstname = raw_input("Firstname:")
+    last_name = raw_input("Last name:")
+    user = User(firstname, last_name, username, password)
+    users[user.user_name] = user
+    print("Welcome {}, your id is {}".format(username, user.id))
 
 def user_login():
     """
     log in user
     """
-    username = input("Please your username: ")
-    password = input("Please your password: ")
-    if username in users and users[username] == password:
+    username = raw_input("Enter username: ")
+    password = raw_input("Enter password: ")
+    if username in users and users[username].user_password == password:
         print("Successfully logged in.")
-        return True
     else:
         print("Invalid credentials!")
-        return False
+        user_login()
+

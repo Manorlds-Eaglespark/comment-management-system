@@ -1,5 +1,6 @@
 import datetime
 from app.user_models import User, users
+from app.user import create_user, user_login
 
 def run_app():
     welcome = """
@@ -23,21 +24,12 @@ def run_app():
         print("I'm sorry, I don't get you.")
 
 def register_user():
-    print("\nPlease register here.")
-    username = raw_input("Username:")
-    password = raw_input("Password:")
-    firstname = raw_input("Firstname:")
-    last_name = raw_input("Last name:")
-    user = User(firstname, last_name, username, password)
-    users[user.id] = user
-    print("Welcome {}, your id is {}".format(username, user.id))
+    create_user()
     login_user()
 
 def login_user():
     print("\nPlease log in.")
-    username = raw_input("Username:")
-    password = raw_input("Password:")
-    print("Welcome {}, your password is {}".format(username, password))
+    user_login()
     run_app()
 
 def create_comment():
