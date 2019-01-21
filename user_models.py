@@ -11,6 +11,14 @@ class User:
         self.user_type = "normal"
         self.last_logged_in = None
 
+    def last_logged_in(self, time):
+        self.last_logged_in = time
+
+    def make_admin(self):
+        self.user_type = 'admin'
+
+    def make_moderator(self):
+        self.user_type = 'moderator'
 
     def to_json(self):
         """ Function returns user data in json format"""
