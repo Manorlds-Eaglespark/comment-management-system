@@ -26,3 +26,7 @@ Collaboration on a team level for remote teams has always been a big problems fo
 * Install all the dependencies in your virtual environment
   
   ```pip install -r requirements.txt```
+
+
+### KEY COLLABORATORS
+[Anorld Mukone](https://github.com/Manorlds-Eaglespark), [Okecho Joan](https://github.com/nearjay06), [Nelson Mwirumubi](https://github.com/mwinel), [Mayanja Benjamin](https://github.com/v1b3m), [Sanya Kenneth](https://github.com/sanya-kenneth)
