@@ -29,4 +29,4 @@ class User:
                 "user_name": self.user_name,
                 "user_password": self.user_password,
                 "user_type": self.user_type,
-                }
+        }
