@@ -1,6 +1,7 @@
 import datetime
 from app.user_models import User, users
 from app.user import create_user, user_login
+from app.comment import create_comment
 
 def run_app():
     welcome = """
@@ -30,15 +31,7 @@ def register_user():
 def login_user():
     print("\nPlease log in.")
     user_login()
-    run_app()
-
-def create_comment():
-    print("\nCreate a comment here.")
-    username = raw_input("Username:")
-    message = raw_input("Enter your comment:")
-    timestamp = datetime.datetime.now()
-
-    print("Hello {}, your comment with message {} has been successfully created at {}".format(username, message, timestamp))
+    create_comment()
 
 if __name__ == '__main__':
     run_app()

@@ -30,3 +30,10 @@ class User:
                 "user_password": self.user_password,
                 "user_type": self.user_type,
                 }
+
+    @staticmethod
+    def check_user(username):
+        if username in users:
+            return True
+        else:
+            return False
