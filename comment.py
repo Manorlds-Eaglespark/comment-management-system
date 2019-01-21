@@ -1,5 +1,7 @@
 comment_db = []
 
+users = {}
+
 class Comments:
      def __init__(self,author,message,timestamp):
       self.comment_id = len(comment_db)+1
@@ -16,12 +18,14 @@ class Comments:
                 "timestamp":self.timestamp
                 }
 
-     def add_comment(self):
-         comment_db.append(to_json())
+     def add_comment(self, user_data, author):
+        if author in users:
+             
 
+             
 
- 
- 
+        comment_db.append(user_data)
+
      def edit_comment(self):
 
  
